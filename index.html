@@ -592,11 +592,11 @@
   method: 'POST',
   mode: 'no-cors',
   headers: { 'Content-Type': 'application/json' },
-  body: JSON.stringify({
-        email: email,
-        date: new Date().toISOString(),
-        source: 'landing-page'
-      })
+body: JSON.stringify({
+  email: email,
+  date: new Date().toLocaleDateString('it-IT'),
+  source: 'landing-page'
+})
     }).catch(() => {}); // silent fail — webhook not set yet
 
     document.getElementById('formWrap').style.display = 'none';
